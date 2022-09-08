@@ -7,15 +7,80 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 7px 10px;
+
   .selection-list {
-    margin-left: 5%;
+    margin-left: 20px;
     select {
+      color: $mid_grey;
+      background-color: $white;
+      font-size: 16px;
+      font-family: $semi_bold_font;
       width: 170px;
       height: 40px;
+      padding-left: 10px;
+      border: 1px solid $light_grey;
+      border-radius: 4px;
+      option {
+        background-color: $button_color;
+      }
     }
   }
+
   .button-style {
     background-color: $dark_bg;
     border: 2px solid $button_color;
+    &:hover {
+      background-color: $button_color;
+    }
+  }
+}
+
+.item-list {
+  display: block;
+  width: 97%;
+  margin: 0 auto;
+  background-color: $pinkish;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  form {
+    padding: 20px;
+    border-bottom: 1px solid $light_grey_border;
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    input {
+      height: 32px;
+      color: $mid_grey;
+      font-size: 14px;
+      font-family: $medium_font;
+      padding: 0 10px;
+      border: 1px solid $light_grey;
+    }
+    input:nth-of-type(1) {
+      // flex-grow: 50;
+      width: 80%;
+      text-align: left;
+    }
+    input:nth-of-type(2) {
+      // flex-grow: 1;
+      width: 20%;
+      text-align: right;
+    }
+  }
+  .total-items {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    p:nth-of-type(1) {
+      font-size: 16px;
+      color: $dark_bg;
+      font-family: $medium_font;
+    }
+    p:nth-of-type(2) {
+      font-size: 18px;
+      color: $dark_bg;
+      font-family: $bold_font;
+    }
   }
 }
