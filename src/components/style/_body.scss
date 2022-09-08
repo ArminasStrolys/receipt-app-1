@@ -6,20 +6,29 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 50%;
-  height: 1000px;
+  height: 800px;
   border: 1px solid $white;
   border-radius: 10px;
-  // .container {
-  //   // width: 50%;
-  // }
 }
 
 body {
-  background-color: $mid_grey;
-  font-family: $bold_font;
-  color: $white;
-  p {
-    font-family: $semi_bold_font;
-    color: $light_grey;
+  background-color: rgb(182, 182, 182);
+  font-family: $medium_font;
+  .button-style {
+    color: $white;
+    background-color: $button_color;
+    width: 127px;
+    height: 40px;
+    text-decoration: none;
+    border: none;
+    border-radius: 19px;
+    transition: 0.3s;
+    font-size: 16px;
+    font-family: $bold_font;
+    margin-right: 50px;
+    &:hover {
+      background-color: $button_color_hover;
+      cursor: pointer;
+    }
   }
 }

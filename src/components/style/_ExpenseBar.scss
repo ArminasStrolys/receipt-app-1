@@ -1,0 +1,21 @@
+@import '_var.scss';
+
+.expense-bar {
+  background-color: $dark_bg;
+  height: 61px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .selection-list {
+    margin-left: 5%;
+    select {
+      width: 170px;
+      height: 40px;
+    }
+  }
+  .button-style {
+    background-color: $dark_bg;
+    border: 2px solid $button_color;
+  }
+}

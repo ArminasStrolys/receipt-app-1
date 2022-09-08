@@ -1,0 +1,26 @@
+@import '_var.scss';
+
+.bottom-bar {
+  border-top: 1px solid $light_grey_border;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .total {
+    margin-left: 50px;
+    height: 70px;
+    display: block;
+    p {
+      color: $dark_bg;
+      font-size: 20px;
+      span {
+        font-family: $bold_font;
+      }
+    }
+  }
+  .add-receipt {
+    margin-right: 50px;
+  }
+}
