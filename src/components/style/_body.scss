@@ -1,0 +1,25 @@
+@import '_var.scss';
+
+.main-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 1000px;
+  border: 1px solid $white;
+  border-radius: 10px;
+  // .container {
+  //   // width: 50%;
+  // }
+}
+
+body {
+  background-color: $mid_grey;
+  font-family: $bold_font;
+  color: $white;
+  p {
+    font-family: $semi_bold_font;
+    color: $light_grey;
+  }
+}
