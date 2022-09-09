@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ExpenseItem from '../expenseItem/ExpenseItem';
 
 export default function ExpenseBar() {
+  const [expenseItem, setExpenseItem] = useState([]);
+
   return (
     <>
       <div className="expense-bar">
@@ -15,14 +18,23 @@ export default function ExpenseBar() {
           </select>
         </div>
         <form>
-          <button className="button-style">Add expense</button>
+          <button
+            onClick={(e) => (
+              e.preventDefault(),
+              setExpenseItem([...expenseItem, <ExpenseItem />])
+            )}
+            className="button-style"
+          >
+            Add expense
+          </button>
         </form>
       </div>
       <div className="item-list">
-        <form>
+        {expenseItem}
+        {/* <form>
           <input type="text" placeholder="Example item" />
           <input type="text" placeholder="€0.00" />
-        </form>
+        </form> */}
         <div className="total-items">
           <p>Total</p>
           <p>€0.00</p>
