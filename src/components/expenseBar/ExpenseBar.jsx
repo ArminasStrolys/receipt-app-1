@@ -2,7 +2,17 @@ import React, { useState } from 'react';
 import ExpenseItem from '../expenseItem/ExpenseItem';
 
 export default function ExpenseBar() {
+  const rndNum = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  };
   const [expenseItem, setExpenseItem] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const getValues = (data) => {
+    // e.preventDefault();
+    // console.log(e);
+    setTotalPrice(totalPrice + data);
+    console.log(data);
+  };
 
   return (
     <>
@@ -21,7 +31,10 @@ export default function ExpenseBar() {
           <button
             onClick={(e) => (
               e.preventDefault(),
-              setExpenseItem([...expenseItem, <ExpenseItem />])
+              setExpenseItem([
+                ...expenseItem,
+                <ExpenseItem getValues={getValues} key={rndNum(0, 99999999)} />,
+              ])
             )}
             className="button-style"
           >
@@ -31,13 +44,9 @@ export default function ExpenseBar() {
       </div>
       <div className="item-list">
         {expenseItem}
-        {/* <form>
-          <input type="text" placeholder="Example item" />
-          <input type="text" placeholder="€0.00" />
-        </form> */}
         <div className="total-items">
           <p>Total</p>
-          <p>€0.00</p>
+          <p>€{totalPrice}</p>
         </div>
       </div>
     </>
