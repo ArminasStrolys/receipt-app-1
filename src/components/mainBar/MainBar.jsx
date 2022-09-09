@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ExpenseBar from '../expenseBar/ExpenseBar';
 
-export default function TotalBar(props) {
+export default function TotalBar() {
   const rndNum = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };

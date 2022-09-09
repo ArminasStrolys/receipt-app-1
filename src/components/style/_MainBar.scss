@@ -8,6 +8,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1;
+  background-color: $white;
+  overflow: auto;
   .total {
     margin-left: 20px;
     height: 70px;

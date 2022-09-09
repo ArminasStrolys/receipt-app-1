@@ -1,14 +1,24 @@
 @import '_var.scss';
 
-.main-container {
-  position: absolute;
-  top: 50%;
+.container {
+  position: relative;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  transform: translate(-50%);
   width: 50%;
   height: 800px;
   border: 1px solid $white;
-  border-radius: 10px;
+  // border-radius: 10px;
+  overflow: auto;
+}
+.second-container {
+  padding: 0 1px;
+  position: relative;
+  margin-top: 70px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: 50%;
 }
 
 body {
