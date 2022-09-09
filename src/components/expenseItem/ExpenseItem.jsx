@@ -3,14 +3,15 @@ import React, { useState, useEffect } from 'react';
 const ExpenseItem = (props) => {
   const [getValue, setGetValue] = useState(0);
   const value = (e) => {
-    setGetValue(parseFloat(e.target.value));
+    setGetValue(parseInt(e.target.value));
   };
-  const handleChange = () => {
-    props.getValues(getValue);
-  };
+
   useEffect(() => {
+    const handleChange = () => {
+      props.getValues(getValue);
+    };
     handleChange();
-  }, [getValue]);
+  }, [getValue, props]);
 
   return (
     <div>

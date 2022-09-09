@@ -1,18 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ExpenseItem from '../expenseItem/ExpenseItem';
 
-export default function ExpenseBar() {
+export default function ExpenseBar(props) {
   const rndNum = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
   const [expenseItem, setExpenseItem] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
   const getValues = (data) => {
-    // e.preventDefault();
-    // console.log(e);
     setTotalPrice(totalPrice + data);
-    console.log(data);
+    console.log(totalPrice);
   };
+
+  useEffect(() => {
+    const handleTotal = () => {
+      props.getValues(totalPrice);
+    };
+    handleTotal();
+  }, [getValues]);
 
   return (
     <>
