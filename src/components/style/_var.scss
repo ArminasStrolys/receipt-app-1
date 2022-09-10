@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'HK Grotesk Bold';
+  src: url(../../fonts/HKGrotesk-Bold.otf);
+}
+@font-face {
+  font-family: 'HK Grotesk Medium';
+  src: url(../../fonts/HKGrotesk-Medium.otf);
+}
+@font-face {
+  font-family: 'HK Grotesk SemiBold';
+  src: url(../../fonts/HKGrotesk-SemiBold.otf);
+}
+
 $white: #ffffff;
 $dark_bg: #250b38;
 $pinkish: #f4eef7;
@@ -8,6 +21,6 @@ $button_color: #f0a023;
 $button_color_hover: #c7851c;
 $transparent_color: rgba(37, 11, 56, 0.25);
 
-$semi_bold_font: HK Grotesk SemiBold;
-$bold_font: HK Grotesk Medium;
-$medium_font: HK Grotesk Bold;
+$semi_bold_font: 'HK Grotesk SemiBold';
+$medium_font: 'HK Grotesk Medium';
+$bold_font: 'HK Grotesk Bold';
