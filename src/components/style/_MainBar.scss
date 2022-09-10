@@ -8,6 +8,7 @@
   margin: 150px auto 0 auto;
   border: 1px solid $white;
 }
+
 .c1 {
   position: relative;
   left: 50%;
@@ -35,6 +36,7 @@
     margin-left: 20px;
     height: 70px;
     display: block;
+
     p {
       color: $dark_bg;
       font-size: 20px;
@@ -43,6 +45,7 @@
       }
     }
   }
+
   .add-receipt {
     margin-right: 50px;
   }

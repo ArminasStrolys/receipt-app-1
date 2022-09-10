@@ -2,12 +2,13 @@
 
 .item-list {
   margin: 15px auto;
+
   form {
     padding: 20px;
-
     display: flex;
     justify-content: space-between;
     gap: 5%;
+
     input {
       height: 32px;
       color: $mid_grey;
@@ -19,18 +20,16 @@
     }
 
     input:nth-of-type(1) {
-      // flex-grow: 50;
       width: 80%;
       text-align: left;
     }
+
     input:nth-of-type(2) {
-      // flex-grow: 1;
       width: 20%;
       text-align: right;
     }
   }
   .bottom-bar {
-    // display: inline;
     height: 0.1px;
     position: absolute;
     width: 87.5%;
