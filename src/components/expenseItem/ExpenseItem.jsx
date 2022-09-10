@@ -24,6 +24,7 @@ const ExpenseItem = (props) => {
           onChange={value}
         />
       </form>
+      <div className="bottom-bar"></div>
     </div>
   );
 };

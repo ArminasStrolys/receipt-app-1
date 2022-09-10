@@ -4,7 +4,7 @@
   margin: 15px auto;
   form {
     padding: 20px;
-    border-bottom: 1px solid $light_grey_border;
+
     display: flex;
     justify-content: space-between;
     gap: 5%;
@@ -17,6 +17,7 @@
       border: 1px solid $light_grey;
       border-radius: 4px;
     }
+
     input:nth-of-type(1) {
       // flex-grow: 50;
       width: 80%;
@@ -27,5 +28,13 @@
       width: 20%;
       text-align: right;
     }
+  }
+  .bottom-bar {
+    // display: inline;
+    height: 0.1px;
+    position: absolute;
+    width: 87.5%;
+    left: 50%;
+    border-bottom: 1px solid $light_grey_border;
   }
 }
