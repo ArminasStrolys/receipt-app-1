@@ -9,7 +9,6 @@ export default function TotalBar() {
   const [expenseTab, setExpenseTab] = useState([]);
   const getValues = (data) => {
     setTotal(total + data);
-    console.log(total);
   };
 
   return (

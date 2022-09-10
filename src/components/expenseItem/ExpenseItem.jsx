@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const ExpenseItem = (props) => {
   const [getValue, setGetValue] = useState(0);
   const value = (e) => {
-    setGetValue(parseInt(e.target.value));
+    setGetValue(parseFloat(e.target.value));
   };
 
   useEffect(() => {
@@ -18,7 +18,8 @@ const ExpenseItem = (props) => {
       <form>
         <input type="text" placeholder="Example item" />
         <input
-          type="text"
+          type="number"
+          step={'0.01'}
           placeholder="€0.00"
           value={getValue}
           onChange={value}

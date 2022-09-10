@@ -9,13 +9,11 @@ export default function ExpenseBar(props) {
   const [totalPrice, setTotalPrice] = useState(0);
   const getValues = (data) => {
     setTotalPrice(totalPrice + data);
-    console.log(totalPrice);
   };
-
+  const handleTotal = () => {
+    props.getValues(totalPrice);
+  };
   useEffect(() => {
-    const handleTotal = () => {
-      props.getValues(totalPrice);
-    };
     handleTotal();
   }, [getValues]);
 
