@@ -7,7 +7,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 7px 10px;
+  margin: 7px auto;
+  width: 95%;
 
   .selection-list {
     margin-left: 20px;
@@ -38,10 +39,10 @@
 
 .item-list {
   display: block;
-  width: 97%;
+  width: 95%;
   margin: 0 auto;
   background-color: $pinkish;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   border-radius: 4px;
 
   .total-items {

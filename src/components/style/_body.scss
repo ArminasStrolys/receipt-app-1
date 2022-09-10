@@ -1,25 +1,52 @@
 @import '_var.scss';
 
-.container {
+.t0 {
+  height: 500px;
+  overflow: auto;
+  margin-top: 150px;
+  .t1 {
+    position: relative;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 50%;
+    border: 1px solid $white;
+    background-color: $button_color;
+  }
+}
+.t2 {
   position: relative;
+  margin-top: 0;
   left: 50%;
   bottom: 0;
   transform: translate(-50%);
   width: 50%;
-  height: 800px;
+  border: 1px solid $white;
+  background-color: $button_color;
+}
+
+.container {
+  position: relative;
+  margin-top: 500px;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%);
+  width: 50%;
+  height: 100px;
   border: 1px solid $white;
   // border-radius: 10px;
   overflow: auto;
 }
-.second-container {
-  padding: 0 1px;
-  position: relative;
-  margin-top: 70px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  width: 50%;
-}
+// .second-container {
+//   padding: 0 1px;
+//   position: relative;
+//   margin-top: 70px;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, 100%);
+//   width: 50%;
+// }
 
 body {
   background-color: rgb(182, 182, 182);

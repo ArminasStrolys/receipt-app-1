@@ -1,16 +1,36 @@
 @import '_var.scss';
 
+.c0 {
+  height: 500px;
+  overflow: auto;
+  background-color: $white;
+  width: 600px;
+  margin: 150px auto 0 auto;
+  border: 1px solid $white;
+}
+.c1 {
+  position: relative;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translate(-50%);
+  width: 100%;
+}
+
 .bottom-bar {
   border-top: 1px solid $light_grey_border;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  position: relative;
+  height: 100px;
+  left: 50%;
+  padding: 0 1px;
+  width: 600px;
+  transform: translate(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
   background-color: $white;
-  overflow: auto;
+
   .total {
     margin-left: 20px;
     height: 70px;

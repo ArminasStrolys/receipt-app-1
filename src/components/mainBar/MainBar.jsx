@@ -14,7 +14,10 @@ export default function TotalBar() {
 
   return (
     <>
-      {expenseTab}
+      <div className="c0">
+        <div className="c1">{expenseTab}</div>
+      </div>
+
       <div className="bottom-bar">
         <div className="total">
           <p>
