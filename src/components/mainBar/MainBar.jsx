@@ -14,8 +14,9 @@ export default function TotalBar() {
 
   return (
     <>
-      <div className="c0">
-        <div className="c1">{expenseTab}</div>
+      <h1>Receipt app - desktop</h1>
+      <div className="main-content">
+        <div className="content">{expenseTab}</div>
       </div>
 
       <div className="bottom-bar">

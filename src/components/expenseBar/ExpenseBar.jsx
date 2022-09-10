@@ -34,6 +34,7 @@ export default function ExpenseBar(props) {
         </div>
         <form>
           <button
+            className="button-style"
             onClick={(e) => (
               e.preventDefault(),
               setExpenseItem([
@@ -41,7 +42,6 @@ export default function ExpenseBar(props) {
                 <ExpenseItem getValues={getValues} key={rndNum(0, 99999999)} />,
               ])
             )}
-            className="button-style"
           >
             Add expense
           </button>

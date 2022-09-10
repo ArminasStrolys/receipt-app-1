@@ -4,7 +4,7 @@
   margin: 15px auto;
 
   form {
-    padding: 20px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     gap: 5%;
@@ -22,18 +22,27 @@
     input:nth-of-type(1) {
       width: 80%;
       text-align: left;
+      margin-left: 20px;
     }
 
     input:nth-of-type(2) {
       width: 20%;
       text-align: right;
+      margin-right: 20px;
     }
   }
   .bottom-bar {
     height: 0.1px;
-    position: absolute;
-    width: 87.5%;
-    left: 50%;
+    position: relative;
+    width: 525px;
     border-bottom: 1px solid $light_grey_border;
+  }
+}
+@media screen and (max-width: 800px) {
+  .item-list {
+    .bottom-bar {
+      width: auto;
+      margin-right: 40px;
+    }
   }
 }
