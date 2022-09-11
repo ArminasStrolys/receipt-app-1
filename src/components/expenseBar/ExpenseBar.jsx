@@ -21,14 +21,24 @@ export default function ExpenseBar(props) {
     <>
       <div className="expense-bar">
         <div className="selection-list">
-          <select>
+          {/* <select>
             <option value="" selected disabled hidden>
               Select
             </option>
             <option value="1">Food</option>
             <option value="2">Houseware</option>
             <option value="3">Entertainment</option>
-          </select>
+          </select> */}
+          <div className="select">
+            Selected
+            <ul>
+              <li>Food</li>
+              <div className="select-bar"></div>
+              <li>Houseware</li>
+              <div className="select-bar"></div>
+              <li>Entertainment</li>
+            </ul>
+          </div>
         </div>
         <form>
           <button

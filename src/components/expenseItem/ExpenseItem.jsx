@@ -11,7 +11,7 @@ const ExpenseItem = (props) => {
       props.getValues(getValue);
     };
     handleChange();
-  }, [getValue, props]);
+  }, [getValue, value]);
 
   return (
     <div>
