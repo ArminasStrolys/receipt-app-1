@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 const ExpenseItem = (props) => {
-  const [getValue, setGetValue] = useState(0);
+  // warning of uncontrolled components because of null value
+  const [getValue, setGetValue] = useState(null);
   const value = (e) => {
     setGetValue(parseFloat(e.target.value));
   };

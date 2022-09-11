@@ -13,7 +13,7 @@ export default function TotalBar() {
 
   return (
     <>
-      <h1>Receipt app - desktop</h1>
+      {/* <h1>Receipt app - desktop</h1> */}
       <div className="main-content">
         <div className="content">{expenseTab}</div>
       </div>
@@ -21,7 +21,7 @@ export default function TotalBar() {
       <div className="bottom-bar">
         <div className="total">
           <p>
-            Total: <span>€{total}</span>
+            Total: <span>€{total.toFixed(2)}</span>
           </p>
         </div>
         <div>

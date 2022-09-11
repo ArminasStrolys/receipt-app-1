@@ -14,7 +14,8 @@ body {
     transition: 0.3s;
     font-size: 16px;
     font-family: $bold_font;
-    margin-right: 35px;
+    margin-right: 25px;
+    white-space: nowrap;
     &:hover {
       background-color: $button_color_hover;
       cursor: pointer;
@@ -27,7 +28,7 @@ body {
     background-color: $white;
     margin: 0;
     .button-style {
-      margin-right: 30px;
+      margin-right: 20px;
     }
   }
 }

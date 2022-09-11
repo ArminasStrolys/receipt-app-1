@@ -57,7 +57,7 @@ export default function ExpenseBar(props) {
         {expenseItem}
         <div className="total-items">
           <p>Total</p>
-          <p>€{totalPrice}</p>
+          <p>€{totalPrice.toFixed(2)}</p>
         </div>
       </div>
     </>

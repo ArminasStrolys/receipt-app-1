@@ -1,17 +1,11 @@
 @import '_var.scss';
 
-h1 {
-  top: 40px;
-  position: relative;
-  text-align: center;
-  color: $dark_bg;
-}
 .main-content {
-  height: 900px;
+  height: 90vh;
   overflow: auto;
   background-color: $white;
   width: 600px;
-  margin: 50px auto 0 auto;
+  margin: 0 auto 0 auto;
   border: 1px solid $white;
 }
 
@@ -38,7 +32,7 @@ h1 {
   background-color: $white;
 
   .total {
-    margin-left: 2.5%;
+    margin-left: 4.5%;
     height: 70px;
     display: block;
 
@@ -49,10 +43,6 @@ h1 {
         font-family: $bold_font;
       }
     }
-  }
-
-  .add-receipt {
-    margin-right: 50px;
   }
 }
 
@@ -68,6 +58,5 @@ h1 {
   }
   .bottom-bar {
     width: 100%;
-    padding: 0 20px;
   }
 }

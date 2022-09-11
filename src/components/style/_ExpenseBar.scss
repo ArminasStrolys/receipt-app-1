@@ -11,7 +11,7 @@
   width: 95%;
 
   .selection-list {
-    margin-left: 20px;
+    margin-left: 10px;
     .select {
       display: block;
       color: $mid_grey;
@@ -23,7 +23,8 @@
       padding-left: 10px;
       border: 1px solid $light_grey;
       border-radius: 4px;
-      position: relative;
+      position: absolute;
+      margin-top: -20px;
       span:nth-child(1) {
         font-size: 16px;
         color: $mid_grey;
@@ -44,7 +45,7 @@
         padding-bottom: 5px;
         margin-left: -10px;
         z-index: 12;
-        width: 490px;
+        width: 510px;
         background-color: $white;
         position: relative;
         z-index: 1;
@@ -53,7 +54,7 @@
         .select-bar {
           height: 0.1px;
           position: relative;
-          width: 500px;
+          width: 520px;
           left: -25px;
           border-bottom: 1px solid $light_grey_border;
           z-index: 0;
@@ -67,7 +68,7 @@
           padding: 5px auto;
           transition: 0.3s;
           border-radius: 4px;
-          width: 99%;
+          width: 520px;
           position: relative;
           line-height: 35px;
           left: 10px;
@@ -85,7 +86,7 @@
     .button-style {
       background-color: $dark_bg;
       border: 2px solid $button_color;
-      margin-right: 20px;
+      margin-right: 10px;
       &:hover {
         background-color: $button_color;
       }
@@ -108,13 +109,90 @@
       font-size: 16px;
       color: $dark_bg;
       font-family: $medium_font;
-      padding-left: 20px;
+      padding-left: 10px;
     }
     p:nth-of-type(2) {
       font-size: 18px;
       color: $dark_bg;
       font-family: $bold_font;
-      padding-right: 20px;
+      padding-right: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .expense-bar {
+    .selection-list {
+      .select {
+        ul {
+          width: 90vw;
+          max-width: fit-content;
+          li {
+            width: 90vw;
+            transition: none;
+            &:hover {
+              width: 87vw;
+            }
+          }
+          .select-bar {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .expense-bar {
+    .selection-list {
+      .select {
+        ul {
+          width: 89vw;
+          li {
+            width: 89vw;
+            transition: none;
+            &:hover {
+              width: 86vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .expense-bar {
+    .selection-list {
+      .select {
+        ul {
+          width: 88vw;
+          li {
+            width: 88vw;
+            transition: none;
+            &:hover {
+              width: 83vw;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .expense-bar {
+    .selection-list {
+      .select {
+        ul {
+          width: 86vw;
+          li {
+            width: 86vw;
+            transition: none;
+            &:hover {
+              width: 80vw;
+            }
+          }
+        }
+      }
     }
   }
 }
