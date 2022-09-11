@@ -6,7 +6,12 @@ export default function ExpenseBar(props) {
     return Math.floor(Math.random() * (max - min + 1) + min);
   };
   const [expenseItem, setExpenseItem] = useState([]);
+  const [select, setSelect] = useState('Select');
+  const [display, setDisplay] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
+  const toggleMenu = () => {
+    display === false ? setDisplay(true) : setDisplay(false);
+  };
   const getValues = (data) => {
     setTotalPrice(totalPrice + data);
   };
@@ -21,22 +26,14 @@ export default function ExpenseBar(props) {
     <>
       <div className="expense-bar">
         <div className="selection-list">
-          {/* <select>
-            <option value="" selected disabled hidden>
-              Select
-            </option>
-            <option value="1">Food</option>
-            <option value="2">Houseware</option>
-            <option value="3">Entertainment</option>
-          </select> */}
-          <div className="select">
-            Selected
-            <ul>
-              <li>Food</li>
+          <div onClick={toggleMenu} className="select">
+            <span>{select}</span> <span> ❯ </span>
+            <ul style={{ display: display === true ? 'block' : 'none' }}>
+              <li onClick={() => setSelect('Food')}>Food</li>
               <div className="select-bar"></div>
-              <li>Houseware</li>
+              <li onClick={() => setSelect('Houseware')}>Houseware</li>
               <div className="select-bar"></div>
-              <li>Entertainment</li>
+              <li onClick={() => setSelect('Entertainment')}>Entertainment</li>
             </ul>
           </div>
         </div>
@@ -45,6 +42,7 @@ export default function ExpenseBar(props) {
             className="button-style"
             onClick={(e) => (
               e.preventDefault(),
+              setDisplay(false),
               setExpenseItem([
                 ...expenseItem,
                 <ExpenseItem getValues={getValues} key={rndNum(0, 99999999)} />,
@@ -55,7 +53,7 @@ export default function ExpenseBar(props) {
           </button>
         </form>
       </div>
-      <div className="item-list">
+      <div onClick={() => setDisplay(false)} className="item-list">
         {expenseItem}
         <div className="total-items">
           <p>Total</p>

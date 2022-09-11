@@ -13,6 +13,7 @@
   .selection-list {
     margin-left: 20px;
     .select {
+      display: block;
       color: $mid_grey;
       background-color: $white;
       font-size: 16px;
@@ -22,6 +23,21 @@
       padding-left: 10px;
       border: 1px solid $light_grey;
       border-radius: 4px;
+      position: relative;
+      span:nth-child(1) {
+        font-size: 16px;
+        color: $mid_grey;
+        position: relative;
+        top: 10px;
+        left: 5px;
+      }
+      span:nth-child(2) {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        color: $button_color;
+        transform: rotate(90deg);
+      }
       ul {
         margin-top: 26px;
         padding-top: 5px;
